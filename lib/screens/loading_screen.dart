@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 import 'package:clima_flutter/services/location.dart';
 import 'package:clima_flutter/services/networking.dart';
@@ -44,6 +45,13 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Center(
+        child: SpinKitFadingCircle(
+          color: Colors.white,
+          size: 60.0,
+        ),
+      ),
+    );
   }
 }
